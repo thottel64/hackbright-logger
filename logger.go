@@ -18,7 +18,6 @@ func (lg *logger) Log(args ...interface{}) {
 	fmt.Fprintln(lg.out)
 }
 
-// looks like this function should return a *logger rather than Logger
-func New(w io.Writer) Logger {
+func New(w io.Writer) *logger {
 	return &logger{out: w}
 }
